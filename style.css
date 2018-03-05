@@ -1,0 +1,96 @@
+h1{
+  color: hotpink;
+}
+input[type="number"]{
+  width: 4em;
+}
+input[type="button"]{
+  color: white;
+  border: none;
+  background-color: hotpink;
+  box-shadow: 1px 1px 2px gray;
+}
+input[type="button"]:active{
+  position: relative;
+  top: 1px;
+  left: 1px;
+  background-color: lightpink;
+  box-shadow: none;
+}
+caption{
+  text-align: left;
+}
+th, td{
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+#about-head{
+  cursor: help;
+}
+#about{
+  padding: 1em;
+  display: none;
+  border-radius: 2em;
+  background-color: whitesmoke;
+}
+#available-cards>ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+#available-cards>ul>li{
+  width: 22em;
+}
+#available-cards input[type="number"]{
+  width: 2em;
+}
+#input-head>span{
+  border-bottom: 0.35em solid pink;
+}
+#result-head>span{
+  border-bottom: 0.35em solid mediumorchid;
+}
+#character-container>div{
+  display: flex;
+}
+#character-container>div>div{
+  text-align: right;
+  width: 8em;
+  padding-right: 1em;
+}
+#types>div{
+  text-align: right;
+  width: 9em;
+}
+#calculate{
+  font-size: x-large;
+  font-weight: bold;
+}
+.input-items{
+  box-sizing: border-box;
+  margin-bottom: 1em;
+  padding: 1em;
+  border: pink solid 0.5em;
+  border-radius: 2em;
+}
+.result-items{
+  box-sizing: border-box;
+  margin-bottom: 1em;
+  padding: 1em;
+  border: mediumorchid solid 0.5em;
+  border-radius: 2em;
+}
+.rare-text{
+  font-weight: bold;
+  color: gold;
+  text-shadow: 1px 1px 2px gray;
+  margin-right: 1em;
+}
+.button-container{
+  margin-bottom: 1em;
+}
+@media (min-width: 1280px){
+  body{
+    width: 1280px;
+  }
+}
