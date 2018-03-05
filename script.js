@@ -703,7 +703,7 @@ onload = function(){
   items_of_type.appendChild(type_items_tr);
   var type_items_names = [
     {ja: "유성당", en: "center"},
-    {ja: "추천", en: "menu"},
+    {ja: "", en: "menu"},
   ]
   for(let i = 0; i < type_items_names.length; i++){
     let tr = document.createElement("tr");
