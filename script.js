@@ -415,7 +415,7 @@ glp.calculate = function(){
   for(let i = 0; i < result.band.length; i++){
     let li = document.createElement("li");
     li.style.color = this.type_colors[result.band[i].type];
-    li.innerHTML = this.character_names[result.band[i].character]+" ["+result.band[i].card_name+"]"+((i==0)?"(リーダー)":"");
+    li.innerHTML = this.character_names[result.band[i].character]+" ["+result.band[i].card_name+"]"+((i==0)?"(리더)":"");
     band_result.appendChild(li);
   }
 
