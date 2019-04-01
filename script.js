@@ -606,35 +606,35 @@ onload = function(){
     document.getElementById("available-rare3"),
     document.getElementById("available-rare4"),
   ];
-  for(let i = 0; i < glp.cards.length; i++){
+  for(const card of glp.cards){
     let li = document.createElement("li");
     let label = document.createElement("label");
     let input = document.createElement("input");
     input.name = "card";
-    input.id = "card-"+glp.cards[i].id;
+    input.id = "card-"+card.id;
     input.type = "checkbox";
     input.checked = false;
     label.appendChild(input);
     let span = document.createElement("span");
-    span.innerHTML = glp.character_names[glp.cards[i].character]+" ["+glp.cards[i].card_name+"] ";
-    span.style.color = glp.type_colors[glp.cards[i].type];
+    span.innerHTML = glp.character_names[card.character]+" ["+card.card_name+"] ";
+    span.style.color = glp.type_colors[card.type];
     label.appendChild(span);
     li.appendChild(label);
     slv_small = document.createElement("small");
-    slv_small.style.display = (glp.cards[i].score_up_rate > 0) ? "inline" : "none";
+    slv_small.style.display = (card.score_up_rate > 0) ? "inline" : "none";
     slv_text = document.createElement("span");
     slv_text.innerHTML = "SLv:";
     slv_small.appendChild(slv_text);
     slv_input = document.createElement("input");
     slv_input.type = "number";
     slv_input.name = "skill";
-    slv_input.id = "skill-"+glp.cards[i].id;
+    slv_input.id = "skill-"+card.id;
     slv_input.min = 1;
     slv_input.max = 5;
     slv_input.value = 1;
     slv_small.appendChild(slv_input);
     li.appendChild(slv_small);
-    available[glp.cards[i].rare-1].appendChild(li);
+    available[card.rare-1].appendChild(li);
   }
 
   var items_of_band = document.getElementById("items-of-band");
