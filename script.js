@@ -450,8 +450,11 @@ glp.save_inputs = function(){
   var skill_data = new Array(this.cards.length);
   var skill_inputs = document.getElementsByName("skill");
   for(let i = 0; i < skill_inputs.length; i++){
-    let idx = parseInt(skill_inputs[i].id.split("-")[1]);
-    skill_data[idx] = parseInt(skill_inputs[i].value);
+    let id = parseInt(skill_inputs[i].id.split("-")[1]);
+    skill_data[i] = {
+      id,
+      level: parseInt(skill_inputs[i].value),
+    }
   }
   localStorage.setItem("girlsBandParty_autoParty_skills", JSON.stringify(skill_data));
 
@@ -499,8 +502,8 @@ glp.restore_inputs = function(){
   // スキルレベル
   var skill_data = JSON.parse(localStorage.getItem("girlsBandParty_autoParty_skills"));
   if(skill_data){
-    for(let i = 0; i < skill_data.length; i++){
-      document.getElementById("skill-"+i).value = parseInt(skill_data[i]);
+    for(const d of skill_data){
+      document.getElementById("skill-"+d.id).value = parseInt(d.level);
     }
   }
 
