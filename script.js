@@ -433,7 +433,7 @@ glp.calculate = function(){
 // 入力情報を記録する関数
 glp.save_inputs = function(){
   if(!localStorage)
-    alert("入力内容の保存に失敗しました\nご利用のブラウザは非対応です");
+    alert("입력내용을 저장하지 못했습니다.\n이 브라우저는 지원하지 않습니다.");
   // 所持カード
   var card_data = new Array(this.cards.length);
   var cards_input = document.getElementsByName("card");
