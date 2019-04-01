@@ -27,6 +27,10 @@ th, td{
 #about-head{
   cursor: help;
 }
+.notice {
+  font-weight: bold;
+  color: #ff0000;
+}
 #about{
   padding: 1em;
   display: none;
