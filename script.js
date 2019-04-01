@@ -438,8 +438,11 @@ glp.save_inputs = function(){
   var card_data = new Array(this.cards.length);
   var cards_input = document.getElementsByName("card");
   for(let i = 0; i < cards_input.length; i++){
-    let idx = parseInt(cards_input[i].id.split("-")[1]);
-    card_data[idx] = cards_input[i].checked;
+    let id = parseInt(cards_input[i].id.split("-")[1]);
+    card_data[i] = {
+      id,
+      checked: cards_input[i].checked,
+    }
   }
   localStorage.setItem("girlsBandParty_autoParty_cards", JSON.stringify(card_data));
 
@@ -488,8 +491,8 @@ glp.restore_inputs = function(){
   // 所持カード
   var card_data = JSON.parse(localStorage.getItem("girlsBandParty_autoParty_cards"));
   if(card_data){
-    for(let i = 0; i < card_data.length; i++){
-      document.getElementById("card-"+i).checked = (card_data[i]) ? true : false;
+    for(const d of card_data){
+      document.getElementById("card-"+d.id).checked = (d.checked) ? true : false;
     }
   }
 
