@@ -17,6 +17,9 @@ input[type="button"]:active{
   background-color: lightpink;
   box-shadow: none;
 }
+input[type="button"]:disabled{
+  background-color: #bbbbbb;
+}
 caption{
   text-align: left;
 }
