@@ -24,13 +24,18 @@ th, td{
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
+#recent-update{
+  color: #bbbbbb;
+  font-weight: bold;
+}
+#notice-head{
+  cursor: help;
+  color: red;
+}
 #about-head{
   cursor: help;
 }
-.notice {
-  font-weight: bold;
-  color: #ff0000;
-}
+#notice,
 #about{
   padding: 1em;
   display: none;
