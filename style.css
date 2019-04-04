@@ -27,6 +27,11 @@ th, td{
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
+a{
+  text-decoration: none;
+  font-weight: bold;
+  color: hotpink;
+}
 #recent-update{
   color: #bbbbbb;
   font-weight: bold;
