@@ -20,7 +20,7 @@ glp.decode_card = function(card){
     character: card[2],
     rare: card[3],
     type: card[4],
-    state: [card[5], card[6], card[7]],
+    state: [parseInt(card[5]), parseInt(card[6]), parseInt(card[7])],
     score_up_rate: card[8],
     score_up_time: 5,
     score_up_max_time: card[9]
