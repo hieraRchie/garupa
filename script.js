@@ -280,8 +280,8 @@ glp.calculate = function(){
       {name: "스튜디오 마이크", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
       {name: "록 마이크", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
       {name: "아이돌 마이크", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
-      {name: "청장미 마이크", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
-      {name: "매칭 마이크", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
+      {name: "파란 장미 마이크", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
+      {name: "고적대 마이크", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
     ],
     guitar: [
       {name: "타에의 기타", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
@@ -312,11 +312,11 @@ glp.calculate = function(){
       {name: "미사키의 DJ세트", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
     ],
     poster: [
-      {name: "포피파의 포스터", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
+      {name: "팝핀파의 포스터", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
       {name: "Afterglow의 포스터", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
       {name: "파스파레의 포스터", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
       {name: "Roselia의 포스터", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
-      {name: "하로하피의 포스터", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
+      {name: "헬로해피의 포스터", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
     ],
     counter: [
       {name: null, band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
@@ -328,11 +328,11 @@ glp.calculate = function(){
       {name: null, band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
     ],
     entrance: [
-      {name: "포피파의 전단지", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
+      {name: "팝핀파의 전단지", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
       {name: "Afterglow의 전단지", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
       {name: "파스파레의 전단지", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
       {name: "Roselia의 전단지", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
-      {name: "하로하피의 전단지", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
+      {name: "헬로해피의 전단지", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
     ],
     sign: [
       {name: null, band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
@@ -341,18 +341,18 @@ glp.calculate = function(){
       {name: "야자수", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
       {name: "족욕탕", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
       {name: "분수", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
-      {name: "미셸 동상", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
-      {name: "분재세트", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
+      {name: "미셸의 동상", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
+      {name: "분재 세트", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
     ],
     courtyard: [
       {name: null, band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
     ],
     menu: [
       {name: "미트소스 파스타", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
-      {name: "아사이 볼", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
-      {name: "후르츠타르트", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
+      {name: "아사이 보울", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
+      {name: "과일 타르트", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
       {name: "마카롱 타워", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
-      {name: "초코코로네", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
+      {name: "초코 소라빵/극상의 커피", band: [0,0,0,0,0], type: [0,0,0,0], all: 0},
     ],
   };
   var microphone_inputs = document.getElementsByName("microphone");
@@ -647,11 +647,11 @@ onload = function(){
 
   var items_of_band = document.getElementById("items-of-band");
   var band_names = [
-    {ja: "포피파", en: "poppinParty", chain: "poppin-party"},
+    {ja: "팝핀파", en: "poppinParty", chain: "poppin-party"},
     {ja: "앱글", en: "afterglow", chain: "afterglow"},
     {ja: "파스파레", en: "pastelPalettes", chain: "pastel-palettes"},
     {ja: "로젤리아", en: "roselia", chain: "roselia"},
-    {ja: "하로하피", en: "helloHappyWorld", chain: "hello-happy-world"}
+    {ja: "헬로해피", en: "helloHappyWorld", chain: "hello-happy-world"}
   ];
   var band_items_tr = document.createElement("tr");
   band_items_tr.appendChild(document.createElement("th"));
