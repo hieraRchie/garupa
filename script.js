@@ -255,17 +255,19 @@ glp.calculate = function(){
   var skill_level_input = document.getElementsByName("skill");
   for(let i = 0; i < cards_input.length; i++){
     if(cards_input[i].checked){
-      if(this.cards[i].score_up_rate > 0){
+      const id = parseInt(cards_input[i].id.split("-")[1]);
+      const _card = this.cards.find(card => { return card.id === id; });
+      if(_card.score_up_rate > 0){
         let skill_level = parseInt(skill_level_input[i].value);
-        let step = Math.floor((Math.round(this.cards[i].score_up_max_time*10) - 50)/4)/10
-        this.cards[i].score_up_time = 5 + step*(skill_level-1);
-        let threshold = 5 - (Math.round(this.cards[i].score_up_max_time*10) - 50)%4;
+        let step = Math.floor((Math.round(_card.score_up_max_time*10) - 50)/4)/10
+        _card.score_up_time = 5 + step*(skill_level-1);
+        let threshold = 5 - (Math.round(_card.score_up_max_time*10) - 50)%4;
         if(skill_level > threshold)
-          this.cards[i].score_up_time += 0.1*(skill_level - threshold)
+          _card.score_up_time += 0.1*(skill_level - threshold)
       }
-      cards.push(this.cards[i]);
-      if(character_kinds.length < 5 && character_kinds.indexOf(this.cards[i].character) < 0)
-        character_kinds.push(this.cards[i].character);
+      cards.push(_card);
+      if(character_kinds.length < 5 && character_kinds.indexOf(_card.character) < 0)
+        character_kinds.push(_card.character);
     }
   }
   if(character_kinds.length < 5){
